@@ -26,7 +26,8 @@ html {
         'Helvetica Neue',
         Arial,
         sans-serif;
-    font-size: 10px;
+    //font-size: 10px;
+    font-size: map-get($font-sizes, "medium"); 
     word-spacing: 1px;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
@@ -34,8 +35,15 @@ html {
     -webkit-font-smoothing: antialiased;
     box-sizing: border-box;
     scroll-behavior: smooth; 
+    @media screen and (max-width: map-get($breakpoints, small)) {
+        font-size: map-get($font-sizes, "small");
+    }
 }
 
+#app {
+    background-color: map-get($colors, "slateblue");
+    color: map-get($colors, "lightgreen");
+}
 *,
 *::before,
 *::after {
