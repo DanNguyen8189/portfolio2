@@ -2,6 +2,7 @@
     <div id='projects' class='content'>
         <div class='left-align-container'>
             <h1 class='section-title'>Some Projects I've Done</h1>
+            <h2>{{ projects[0].title }}</h2>
             <featured-project/>
             <featured-project/>
         </div>
@@ -16,7 +17,11 @@
 <script>
 import FeaturedProject from '~/components/FeaturedProject.vue';
 import BasicProject from '~/components/BasicProject.vue';
-export default {};
+export default {
+    props: [
+        'projects'
+    ]
+};
 </script>
 
 <style scoped lang='scss'>

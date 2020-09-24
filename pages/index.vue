@@ -21,14 +21,34 @@
         </div>
     </div>-->
     <about-me/>
-    <projects/>
+    <projects :projects="projects"/>
 </div>
 </template>
 
 <script>
 import AboutMe from '~/components/AboutMe.vue';
 import Projects from '~/components/Projects.vue';
-export default {};
+export default {
+    components: {
+        Projects
+    },
+    data() {
+        return {
+            preciousThing: 'ring'
+        }
+    },
+    async asyncData({ $content }) {
+        let projects = await $content('projects').fetch();
+        projects = projects[0];
+        console.log(projects);
+        // console.log("title: " + projects[0].body.children[0].props.id);
+
+        //console.log(projects[0][1].title);
+        return {
+            projects: projects
+        }
+    }
+};
 </script>
 
 <style lang='scss'>

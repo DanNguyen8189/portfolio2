@@ -1,0 +1,13 @@
+[{
+    "title": "Surfstore",
+    "description": "A cloud-based file storage application",
+    "technologies": ["C++", "AWS"]
+},
+{
+    "title": "DejaPhoto",
+    "description": "An android app that allows users to have a changing phone background of their photos",
+    "github": "https://github.com/DanNguyen8189/Team-29-DejaPhoto",
+    "technologies": ["android", "Java", "firebase"]
+}]
+  
+  
