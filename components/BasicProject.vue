@@ -1,12 +1,22 @@
 <template>    
     <div class='left-align-container'>
-        <h1>Basic Project</h1>
-        <p>project text!!!! af asdf asdf asfd asdf asdf as dfa sdfasd asdf  af asdf  asdf a asf asfasf</p>
+        <h1>{{ project.title }}</h1>
+        <p>{{ project.description }}</p>
     </div>
 </template>
 
 <script>
-export default {};
+export default {
+    /*props: [
+        'title',
+        'description',
+        'github',
+        'technologies'
+    ]*/
+    props: [
+        'project'
+    ]
+};
 </script>
 
 <style scoped lang='scss'>

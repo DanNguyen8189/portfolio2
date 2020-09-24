@@ -7,14 +7,18 @@
     </div>-->
     <!--<div class='content'>-->
         <div class='left-align-container'>
-            <h1>Featured Project</h1>
-            <p>project text!!!!a asdfasdf asdf asdf asdf adf  asdaef  asf asf aef  asf</p>
+            <h1>{{ project.title }}</h1>
+            <p>{{ project.description }}</p>
         </div>
     <!--</div>-->
 </template>
 
 <script>
-export default {};
+export default {
+    props: [
+        'project'
+    ]
+};
 </script>
 
 <style scoped lang='scss'>

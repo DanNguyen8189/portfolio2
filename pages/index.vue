@@ -38,9 +38,12 @@ export default {
         }
     },
     async asyncData({ $content }) {
-        let projects = await $content('projects').fetch();
-        projects = projects[0];
+        let projects = await $content('projects').only(['projects']).fetch();
         console.log(projects);
+        //console.log("length: " + projects.length);
+        projects = projects[0].projects;
+        console.log(projects);
+
         // console.log("title: " + projects[0].body.children[0].props.id);
 
         //console.log(projects[0][1].title);
