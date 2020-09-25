@@ -5,19 +5,22 @@
             <!--<h2>{{ projects[0].title }}</h2>-->
             <!--<featured-project :project='projects[0]'/>
             <featured-project :project='projects[1]'/>-->
-            <div v-for='project in projects' v-if='project.featured == true' :key='project.title' class='project-grid'>
+            <div v-for='project in projects' v-if='project.featured == true' :key='project.title'>
                 <featured-project :project='project'/>
             </div>
         </div>
+        <!--<div class='project-grid'>
+            <basic-project :project='projects[0]'/>
+            <basic-project :project='projects[0]'/>
+            <basic-project :project='projects[0]'/>
+            <basic-project :project='projects[0]'/>
+        </div>-->
         <div class='project-grid'>
-            <!--<basic-project :title="projects[1].title" :description="projects[1].description" 
-            :github="projects[1].github" :technologies="projects[1].technologies"/>
-            <basic-project/>-->
-        </div>
-        <div v-for='project in projects' v-if='project.featured == null' :key='project.title' class='project-grid'>
+        <div v-for='project in projects' v-if='project.featured == null' :key='project.title' class='basic-project'>
             <!--<basic-project :title="projects[n-1].title" :description="projects[n-1].description" 
                 :github="projects[n-1].github" :technologies="projects[n-1].technologies"/>-->
             <basic-project :project='project'/>
+        </div>
         </div>
     </div>
 </template>
@@ -46,15 +49,39 @@ export default {
 .content {
     flex-direction: column;
 }
-.project-grid {
+/*.project-grid {
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
-/*.left-align-container {
-    flex: 100%;
-}
-.center-align-container {
-    flex: 100%;
+.basic-project {
+    flex-basis: 100%;
+    @media screen and (min-width: map-get($breakpoints, medium)) {
+        //flex-basis: 49%;
+        flex: 1 1 50%;
+    }
 }*/
+
+.project-grid {
+    display: flex;
+    //align-items: flex-start;
+    align-items: stretch;
+    flex-wrap: wrap;
+    //justify-content: space-between;
+    
+    margin: (-1 * map-get($spacing, 'project-margin')) (-1 *map-get($spacing, 'project-margin'));
+}
+.basic-project {
+    display: flex;
+    align-items: stretch;
+    // width: calc(100% - 14px);
+    width: calc(100% - 2 * #{map-get($spacing, 'project-margin')});
+    margin: map-get($spacing, 'project-margin');
+    @media screen and (min-width: map-get($breakpoints, medium)) {
+        //flex-basis: 49%;
+        //flex: 1 1 50%;
+        width: calc(50% - 2 * #{map-get($spacing, 'project-margin')});
+    }
+}
 </style>

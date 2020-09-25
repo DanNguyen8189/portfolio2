@@ -11,6 +11,13 @@
         "technologies": ["Android", "Java", "Firebase"]
     },
     {
+        "title": "UCSD Web Components Library",
+        "description": "Developed part of an open-source UC San Diego web components library and compiled them to form a service called Rate-it, a service like Reddit but with a rating system.",
+        "github": "https://github.com/ucsd-cse112/team7",
+        "link": "https://ucsd-cse112.github.io/team7/",
+        "technologies": ["Node", "TravisCI", "es6"]
+    },
+    {
         "title": "Hotspotify",
         "featured": true,
         "description": "A web application that lets Spotify users view their most played music tracks and artists",

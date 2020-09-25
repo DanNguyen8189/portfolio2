@@ -9,6 +9,11 @@
         <div class='left-align-container'>
             <h1>{{ project.title }}</h1>
             <p>{{ project.description }}</p>
+            <div id='technologies-list'>
+                <div v-for='technology in project.technologies' :key='technology'>
+                    <p>{{ technology }}</p>
+                </div>
+            </div>
         </div>
     <!--</div>-->
 </template>
@@ -22,16 +27,28 @@ export default {
 </script>
 
 <style scoped lang='scss'>
+h1 {
+    color: map-get($colors, "orange");
+}
+
+p {
+    font-size: 1.5rem;
+}
 .left-align-container {
     background: map-get($colors, "darkgreen");
     padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
+    margin: (2 * map-get($spacing, 'project-margin')) 0;
     @media screen and (min-width: map-get($breakpoints, large)) {
         padding: 30px;
     }
 }
-h1 {
-    color: map-get($colors, "orange");
+#technologies-list {
+    align-self: flex-end;
+    margin-top: auto;
+    display: flex;
+    p {
+        opacity: 70%;
+        margin: 2rem 0 0 2rem;
+    }
 }
 </style>

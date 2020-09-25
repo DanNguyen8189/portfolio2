@@ -1,6 +1,6 @@
 <template>
     <div id='app'>
-        <nav-bar/>
+        <nav-bar id='nav-bar'/>
         <Nuxt />
     </div>
 </template>
@@ -51,6 +51,9 @@ html {
     margin: 0;
 }
 
+/*#nav-bar {
+    position: fixed;
+}*/
 .button--green {
     display: inline-block;
     border-radius: 4px;
