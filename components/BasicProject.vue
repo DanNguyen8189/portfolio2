@@ -54,7 +54,6 @@ p {
     margin-top: auto;
     display: flex;
     p {
-        opacity: 70%;
         margin: 0 0 0 2rem;
     }
 }

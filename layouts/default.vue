@@ -1,6 +1,7 @@
 <template>
     <div id='app'>
         <nav-bar id='nav-bar'/>
+        <hamburger-nav id='hamburger-nav'/>
         <Nuxt />
     </div>
 </template>
@@ -8,9 +9,11 @@
 <script>
 //import NavBar from '~/components/NavBar.vue';
 import NavBar from '~/components/NavBar.vue';
+import HamburgerNav from '~/components/HamburgerNav.vue';
 export default {
     components: {
-        NavBar
+        NavBar,
+        HamburgerNav
     }
 }
 </script>
@@ -40,16 +43,30 @@ html {
     }
 }
 
-#app {
-    background-color: map-get($colors, "slateblue");
-    color: map-get($colors, "lightgreen");
-}
 *,
 *::before,
 *::after {
     box-sizing: border-box;
     margin: 0;
 }
+
+#app {
+    background-color: map-get($colors, "slateblue");
+    color: map-get($colors, "lightgreen");
+}
+
+@media screen and (min-width: map-get($breakpoints, medium)) {
+    #hamburger-nav {
+        display: none;
+    }
+}
+
+@media screen and (max-width: map-get($breakpoints, medium)) {
+    #nav-bar {
+        display: none;
+    }
+}
+
 
 /*#nav-bar {
     position: fixed;

@@ -6,7 +6,7 @@
         </div>
     </div>-->
     <!--<div class='content'>-->
-        <div class='left-align-container'>
+        <div id='featured-project-container'>
             <h1>{{ project.title }}</h1>
             <p>{{ project.description }}</p>
             <div id='technologies-list'>
@@ -31,13 +31,17 @@ h1 {
     color: map-get($colors, "orange");
 }
 
-p {
-    font-size: 1.5rem;
-}
-.left-align-container {
+#featured-project-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    text-align: left;
     background: map-get($colors, "darkgreen");
     padding: 10px;
     margin: (2 * map-get($spacing, 'project-margin')) 0;
+    p {
+        font-size: 1.5rem;
+    }
     @media screen and (min-width: map-get($breakpoints, large)) {
         padding: 30px;
     }
@@ -47,7 +51,6 @@ p {
     margin-top: auto;
     display: flex;
     p {
-        opacity: 70%;
         margin: 2rem 0 0 2rem;
     }
 }

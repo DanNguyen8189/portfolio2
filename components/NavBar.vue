@@ -40,11 +40,11 @@
 }
 nav {
     margin: 2rem;
-    color: map-get($colors, "yellow");
+    color: map-get($colors, "orange");
 }
 .nav-link {
     margin: 0 2rem;
-    color: map-get($colors, "yellow");
+    color: map-get($colors, "orange");
     font-weight: bold;
     text-decoration: none;
 }
