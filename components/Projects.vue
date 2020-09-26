@@ -5,9 +5,12 @@
             <!--<h2>{{ projects[0].title }}</h2>-->
             <!--<featured-project :project='projects[0]'/>
             <featured-project :project='projects[1]'/>-->
-            <div v-for='project in projects' v-if='project.featured == true' :key='project.title'>
-                <featured-project :project='project'/>
+            <div v-for='n in projects.length' v-if='projects[n-1].featured == true' :key='n'>
+                <featured-project :project='projects[n-1]' :orientation='n'/>
             </div>
+            <!--<div v-for='project in projects' v-if='project.featured == true' :key='project.title'>
+                <featured-project :project='project'/>
+            </div>-->
         </div>
         <!--<div class='project-grid'>
             <basic-project :project='projects[0]'/>

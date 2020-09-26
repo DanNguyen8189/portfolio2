@@ -32,12 +32,14 @@
 <script>
 export default {
     methods: {
+        // whenever someone clicks a menu item the menu closes
         toggleMenu: function () {
             this.checked = !this.checked;
         }
     },
     data() {
         return {
+            // this is used for closing the menu when someone clicks a menu item
             checked: false
         }
     }

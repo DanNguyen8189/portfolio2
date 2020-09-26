@@ -19,6 +19,8 @@
     },
     {
         "title": "Hotspotify",
+        "image": "~static/hotspotify-screenshot.jpg",
+        "img": "hotspotify-screenshot.jpg",
         "featured": true,
         "description": "A web application that lets Spotify users view their most played music tracks and artists",
         "github": "https://github.com/DanNguyen8189/hotspotify",

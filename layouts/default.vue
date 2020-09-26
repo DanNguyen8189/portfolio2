@@ -51,10 +51,14 @@ html {
 }
 
 #app {
-    background-color: map-get($colors, "slateblue");
-    color: map-get($colors, "lightgreen");
+    background-color: map-get($colors, "background");
+    //background: rgb(38,70,83);
+    //background: linear-gradient(180deg, rgba(38,70,83,1) 0%, rgba(164,165,129,1) 100%);
+    //background-attachment: fixed;
+    color: map-get($colors, "default-text");
 }
 
+// display settings for both kinds of menus
 @media screen and (min-width: map-get($breakpoints, medium)) {
     #hamburger-nav {
         display: none;
