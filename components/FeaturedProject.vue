@@ -9,7 +9,11 @@
         <div id= 'featured-project-container' :class="orientation % 2 == 0 ? 'left-orientation' : 'right-orientation'">
         <!--<div class='left-orientation' id= 'featured-project-container'>-->
             <div id='project-info-container'>
-                <h1>{{ project.title }}</h1>
+                <div id='icons'>
+                    <h1>{{ project.title }}</h1>
+                    <a v-if="project.github != null" :href="project.github"><i class="fab fa-github"></i></a>
+                    <a v-if="project.link != null" :href="project.link"><i class="fas fa-external-link-alt"></i></a>
+                </div>
                 <p>{{ project.description }}</p>
                 <div id='technologies-list'>
                     <div v-for='technology in project.technologies' :key='technology'>
@@ -33,12 +37,15 @@ export default {
         'orientation'
     ],
     methods: {
-        // whenever someone clicks a menu item the menu closes
+        // get image url for this project
         getSrc: function () {
-            console.log("image link: " + "~static/" + this.project.img);
-            console.log("image link2: " + "require(`@/static/${'hotspotify-screenshot.jpg'}`)");
+            //console.log("image link: " + "~static/" + this.project.img);
+            //console.log("image link2: " + "require(`@/static/${'hotspotify-screenshot.jpg'}`)");
             //return "~static/" + this.project.img;
             // return "require(`@/static/${'hotspotify-screenshot.jpg'}`)";
+
+            // shorthand for 'require.context'. Using require.context, you force the 
+            // files to be seen by webpack and resolve to the resulting image when setting src dynamically
             return require('../static/' + this. project.img);
         }
     },
@@ -52,7 +59,7 @@ h1 {
 #featured-project-container {
     /*display: flex;
     flex-direction: column;*/
-    margin: (2 * map-get($spacing, 'project-margin')) 0;
+    margin: (8 * map-get($spacing, 'project-margin')) 0;
     /*@media screen and (min-width: map-get($breakpoints, large)) {
         flex-direction: row;
     }*/
@@ -83,6 +90,25 @@ h1 {
     }
     @media screen and (min-width: map-get($breakpoints, large)) {
         padding: 30px;
+    }
+}
+
+#icons {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    h1 {
+        font-size: 2.5rem;
+        align-self: flex-start;
+        margin-right: auto;
+    }
+    a {
+        margin-left: 2rem;
+    }
+    a, a:visited, a:hover, a:active {
+        color: inherit;
     }
 }
 

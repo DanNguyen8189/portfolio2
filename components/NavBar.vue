@@ -1,7 +1,7 @@
 <template>
     <div class='nav'>
         <nuxt-link to='/' class='brand'>
-           Home
+           <i class="fas fa-home"></i>
         </nuxt-link>
         <nav>
             <!--<a href="#aboutme">About Me</a>-->
@@ -12,10 +12,13 @@
             <nuxt-link :to="{ path: '/', hash: '#projects'}" class='nav-link'>
                 Projects
             </nuxt-link> |     
-            <nuxt-link to='/' class='nav-link'>
+            <!--<nuxt-link to='/resume.pdf' class='nav-link'>
                 Resume
-            </nuxt-link> |     
-            <nuxt-link to='/contact' class='nav-link'>
+            </nuxt-link>-->
+            <a href='resume.pdf' class='nav-link' target='_blank'>
+                Resume
+            </a> |     
+            <nuxt-link :to="{ path: '/', hash: '#contact'}" class='nav-link'>
                 Contact
             </nuxt-link>
         </nav>
@@ -32,11 +35,13 @@
     left: 0;
     right: 0;
     background-color: map-get($colors, "slateblue");
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(30px);
 }
 .brand {
     margin-right: auto;
     margin-left: 2rem;
+    font-size: 3rem;
+    color: map-get($colors, "redorange");
 }
 nav {
     margin: 2rem;

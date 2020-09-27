@@ -1,6 +1,10 @@
 <template>    
     <div id='basic-project-container'>
-        <i class="fab fa-github"></i>
+        <div id='icons'>
+            <i class="fas fa-cog"></i>
+            <a v-if="project.github != null" :href="project.github"><i class="fab fa-github"></i></a>
+            <a v-if="project.link != null" :href="project.link"><i class="fas fa-external-link-alt"></i></a>
+        </div>
         <h1>{{ project.title }}</h1>
         <p>{{ project.description }}</p>
         <div id='technologies-list'>
@@ -28,6 +32,7 @@ export default {
 <style scoped lang='scss'>
 h1 {
     color: map-get($colors, "orange");
+    margin-bottom: 2rem;
 }
 p {
     font-size: 1.5rem;
@@ -49,6 +54,26 @@ p {
         //margin: 5px;
     }
 }
+
+#icons {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    .fa-cog {
+        align-self: flex-start;
+        margin-right: auto;
+        font-size: 3rem;
+    }
+    a {
+        margin-left: 2rem;
+    }
+    a, a:visited, a:hover, a:active {
+        color: inherit;
+    }
+}
+
 #technologies-list {
     align-self: flex-end;
     margin-top: auto;

@@ -16,10 +16,10 @@
                         <li @click='toggleMenu()'><nuxt-link :to="{ path: '/', hash: '#projects'}" class='nav-link'>
                             Projects
                         </nuxt-link></li>
-                        <li @click='toggleMenu()'><nuxt-link to='/' class='nav-link'>
+                        <li @click='toggleMenu()'><a href='resume.pdf' class='nav-link' target='_blank'>
                             Resume
-                        </nuxt-link></li>
-                        <li@click='toggleMenu()'><nuxt-link to='/contact' class='nav-link'>
+                        </a></li>
+                        <li@click='toggleMenu()'><nuxt-link :to="{ path: '/', hash: '#contact'}" class='nav-link'>
                             Contact
                         </nuxt-link></li>
                     </ul>

@@ -11,6 +11,28 @@
                 <h1 class='name'>Dan Nguyen</h1>
                 <p>Welcome to my site! I'm a newly graduated software developer 
                     looking for my first full-time role. Can I interest you in some projects of mine?</p>
+                <ul class='social_media'>
+                    <li id='linkedin'>
+                        <a href="https://www.linkedin.com/in/dannguyen8189/" target="_blank">
+                            <i class='fab fa-linkedin-in' aria-hidden='true'></i>
+                        </a>
+                    </li>
+                    <li id="github">
+                        <a href="https://github.com/DanNguyen8189" target="_blank">
+                            <i class='fab fa-github' aria-hidden='true'></i>
+                        </a>
+                    </li>
+                    <!--<li id='twitter'>
+                        <a href="https://twitter.com/Danimalphantom" target="_blank">
+                            <i class='fab fa-twitter' aria-hidden='true'></i>
+                        </a>
+                    </li>-->
+                    <li id='dev-to'>
+                        <a href="https://dev.to/danimalphantom" target="_blank">
+                            <i class='fab fa-dev' aria-hidden='true'></i>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
@@ -22,12 +44,14 @@
     </div>-->
     <about-me/>
     <projects :projects="projects"/>
+    <contact/>
 </div>
 </template>
 
 <script>
 import AboutMe from '~/components/AboutMe.vue';
 import Projects from '~/components/Projects.vue';
+import Contact from '~/components/Contact.vue';
 export default {
     components: {
         Projects
@@ -131,4 +155,96 @@ export default {
 .links {
     padding-top: 15px;
 }
+.social_media {
+  /*position: absolute;
+    top: 9rem;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    display: block;
+    margin-top: 5rem;
+    margin-right: 0;
+    margin-left: auto;
+    text-align: center;
+    padding: 0; /*needed to correectly center*/
+    position: relative;
+    color: black;
+}
+.social_media li {
+    display: inline-block;
+    list-style: none;
+    position: relative;
+    margin-left: 3rem;
+}
+
+.social_media li a {
+    //original width: 70 height: 40
+    width: 7rem;
+    height: 4rem;
+    background: #fff;
+    display: block;
+    text-align: center;
+    line-height: 0px; //removing this breaks the mobile version?*
+    font-size: 4rem;
+    transition: 0.5s;
+    color: black;
+    opacity: 0.75;
+}
+.social_media li a:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    z-index: -1;
+    transform: rotate(60deg);
+}
+.social_media li a:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    z-index: -1;
+    transform: rotate(-60deg);
+}
+
+.social_media li a:hover {
+    transition: transform 0.25s;
+    transform: rotate(7deg);
+    opacity: 1;
+    /*color: #59316e;*/
+    /*background: #aefade;*/
+}
+
+#linkedin a:hover {
+    background: #007bb5;
+    color: white;
+}
+#github a:hover {
+    background: black;
+    color: white;
+}
+#instagram a:hover {
+    background: #c32aa3;
+    color: white;
+}
+#twitter a:hover {
+    background: #1da1f2;
+    color: white;
+}
+#dev-to a:hover {
+    background: black;
+    color: white;   
+}
+/*On-click for social media buttons*/
+.social_media li a:active {
+    transition: transform 0.2s;
+    transform: rotate(15deg) scale(0.9);
+    opacity: 0.4;
+}
+
 </style>
