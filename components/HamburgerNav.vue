@@ -79,8 +79,8 @@ body{
     z-index: 1;
     width: 60px;
     height: 60px;
-    padding: 2.2rem;
-    background: green;
+    padding: 1.6rem;
+    background: map-get($colors, 'block1');
     display: flex;
     align-items: center;
     justify-content: center;
@@ -114,7 +114,7 @@ body{
 /* Toggler animate */
 .menu-wrap .toggler:checked + .hamburger > div{
     transform: rotate(135deg);
-    background: yellow;
+    background: map-get($colors, 'accent1');
 }
 /* Turn Lines into X */
 .menu-wrap .toggler:checked + .hamburger > div:before,
@@ -175,7 +175,7 @@ body{
 }
 .menu-wrap .menu > div > div > ul > li {
     list-style: none;
-    color: #fff;
+    color: map-get($colors, 'accent1');
     font-size: 3rem;
     padding: 1rem;
 }
@@ -186,6 +186,6 @@ body{
     transition: color 0.4s ease;
 }
 .menu-wrap .menu > div > div > ul > li > a:hover {
-    color: orange;
+    color: map-get($colors, 'accent1');
 }
 </style>

@@ -22,11 +22,6 @@
                             <i class='fab fa-github' aria-hidden='true'></i>
                         </a>
                     </li>
-                    <!--<li id='twitter'>
-                        <a href="https://twitter.com/Danimalphantom" target="_blank">
-                            <i class='fab fa-twitter' aria-hidden='true'></i>
-                        </a>
-                    </li>-->
                     <li id='dev-to'>
                         <a href="https://dev.to/danimalphantom" target="_blank">
                             <i class='fab fa-dev' aria-hidden='true'></i>
@@ -106,8 +101,15 @@ export default {
     justify-content: center;
     align-items: center;
     text-align: center;
+    //background: url("~@/static/unsplash-adirenconverse.jpg");
+    background: linear-gradient(rgba(38, 70, 83, 0.80), rgba(38, 70, 83, 0.80)),
+  url("~@/static/unsplash-adirenconverse.jpg"); /*background image + tint*/
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
 }
-
 // containers used in other components
 .center-align-container {
     margin: 0 auto;
@@ -124,6 +126,11 @@ export default {
     p {
         font-size: 2rem;
     }
+    @media screen and (max-width: map-get($breakpoints, large)) {
+        p { 
+            font-size: 1.5rem;
+        }
+    }
 }
 /*.left-align-container p{
     flex-basis: 100%;
@@ -134,20 +141,20 @@ export default {
     font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
       "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     display: block;
-    font-weight: 300;
-    font-size: 8rem;
+    font-weight: 700;
+    font-size: 6rem;
     //color: #35495e;
     // color: $green;
-    color: map-get($colors, "orange");
+    color: map-get($colors, 'accent1');
     letter-spacing: 1px;
     margin: 20px 0;
 }
 
 .section-title {
-    font-weight: 300;
-    font-size: 5rem;
+    font-weight: 700;
+    font-size: 4rem;
     //color: #526488;
-    color: map-get($colors, "yellow");
+    color: map-get($colors, 'accent1');
     word-spacing: 5px;
     padding-bottom: 15px;
 }
@@ -173,21 +180,25 @@ export default {
     display: inline-block;
     list-style: none;
     position: relative;
-    margin-left: 3rem;
+    font-size: 3rem;
+    margin-left: 1em;
 }
 
 .social_media li a {
     //original width: 70 height: 40
-    width: 7rem;
-    height: 4rem;
+    width: 1.75em;
+    height: 1em;
     background: #fff;
     display: block;
     text-align: center;
     line-height: 0px; //removing this breaks the mobile version?*
-    font-size: 4rem;
+    font-size: 3rem;
     transition: 0.5s;
     color: black;
     opacity: 0.75;
+    @media screen and (min-width: map-get($breakpoints, large)) {
+        font-size: 4rem;
+    }
 }
 .social_media li a:before {
     content: "";

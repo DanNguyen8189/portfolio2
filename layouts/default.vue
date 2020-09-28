@@ -38,9 +38,9 @@ html {
     -webkit-font-smoothing: antialiased;
     box-sizing: border-box;
     scroll-behavior: smooth; 
-    @media screen and (max-width: map-get($breakpoints, small)) {
+    /*@media screen and (max-width: map-get($breakpoints, small)) {
         font-size: map-get($font-sizes, "small");
-    }
+    }*/
 }
 
 *,
@@ -55,7 +55,7 @@ html {
     //background: rgb(38,70,83);
     //background: linear-gradient(180deg, rgba(38,70,83,1) 0%, rgba(164,165,129,1) 100%);
     //background-attachment: fixed;
-    color: map-get($colors, "default-text");
+    color: map-get($colors, "text-default");
 }
 
 // display settings for both kinds of menus

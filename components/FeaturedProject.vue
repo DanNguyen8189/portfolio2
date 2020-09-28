@@ -54,7 +54,7 @@ export default {
 
 <style scoped lang='scss'>
 h1 {
-    color: map-get($colors, "orange");
+    color: map-get($colors, 'accent1');
 }
 #featured-project-container {
     /*display: flex;
@@ -83,13 +83,10 @@ h1 {
     flex-direction: column;
     margin: 0;
     text-align: left;
-    background: map-get($colors, "darkgreen");
-    padding: 10px;
+    background: map-get($colors, 'block1');
+    padding: 3rem;
     p {
         font-size: 1.5rem;
-    }
-    @media screen and (min-width: map-get($breakpoints, large)) {
-        padding: 30px;
     }
 }
 
@@ -97,7 +94,7 @@ h1 {
     display: flex;
     width: 100%;
     justify-content: flex-end;
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 2rem;
     h1 {
         font-size: 2.5rem;
@@ -105,10 +102,14 @@ h1 {
         margin-right: auto;
     }
     a {
+        transition: color .5s;
         margin-left: 2rem;
     }
-    a, a:visited, a:hover, a:active {
+    a, a:visited, a:active {
         color: inherit;
+    }
+    a:hover {
+        color: map-get($colors, 'accent2');
     }
 }
 
@@ -130,7 +131,7 @@ h1 {
 
 img {
     width: 100%;
-    @media screen and (min-width: map-get($breakpoints, medium)) {
+    @media screen and (min-width: map-get($breakpoints, large)) {
         width: 70%;
     }
 }

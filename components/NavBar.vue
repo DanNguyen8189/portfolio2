@@ -31,27 +31,32 @@
     justify-content: flex-end;
     font-size: 1.5rem;
     position: fixed;
+    z-index: 2;
     top: 0;
     left: 0;
     right: 0;
-    background-color: map-get($colors, "slateblue");
+    //@at-rootbackground-color: map-get($colors, 'background');
     backdrop-filter: blur(30px);
 }
 .brand {
     margin-right: auto;
     margin-left: 2rem;
     font-size: 3rem;
-    color: map-get($colors, "redorange");
+    color: map-get($colors, "accent1");
 }
 nav {
     margin: 2rem;
-    color: map-get($colors, "orange");
+    color: map-get($colors, 'accent1');
+    :hover {
+        color: map-get($colors, 'accent2');
+    }
 }
 .nav-link {
     margin: 0 2rem;
-    color: map-get($colors, "orange");
+    color: map-get($colors, 'accent1');
     font-weight: bold;
     text-decoration: none;
+    transition: color .5s;
 }
 /*.nuxt-link {
     color: map-get($colors, "yellow");

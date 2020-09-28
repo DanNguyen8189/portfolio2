@@ -1,12 +1,12 @@
 {
     "projects": [{
         "title": "Surfstore",
-        "description": "A cloud-based file storage application",
+        "description": "A file storage application that lets users sync files to and from the cloud.",
         "technologies": ["C++", "AWS"]
     },
     {
         "title": "DejaPhoto",
-        "description": "An android app that allows users to have a changing phone background of their photos",
+        "description": "An android app that allows users to have a changing phone background of their photos, as well as their friend's photos, based on the time, day, and place the photo was taken.",
         "github": "https://github.com/DanNguyen8189/Team-29-DejaPhoto",
         "technologies": ["Android", "Java", "Firebase"]
     },
@@ -16,6 +16,16 @@
         "github": "https://github.com/ucsd-cse112/team7",
         "link": "https://ucsd-cse112.github.io/team7/",
         "technologies": ["Node", "TravisCI", "es6"]
+    },
+    {
+        "title": "Router Implementation",
+        "description": "Built a simple router that runs in a virtual machine given a static network topology and routing table, which processes raw ethernet frames and forwards them to the correct outgoing interface.",
+        "technologies": ["C"]
+    },
+    {
+        "title": "Gomoku AI Solver",
+        "description": "Used Monte Carlo Tree Search algorithm method to implement an artificially intelligent agent to play the game of Gomoku, also known as Gobang or Go",
+        "technologies": ["Python"]
     },
     {
         "title": "Hotspotify",

@@ -31,7 +31,7 @@ export default {
 
 <style scoped lang='scss'>
 h1 {
-    color: map-get($colors, "orange");
+    color: map-get($colors, 'accent1');
     margin-bottom: 2rem;
 }
 p {
@@ -43,23 +43,22 @@ p {
     margin: 0;
     text-align: left;
     width: 100%;
-    background: map-get($colors, "darkgreen");
-    padding: 10px;
+    background: map-get($colors, 'block1');
+    padding: 3rem;
     p {
         margin-bottom: 3rem;
     }
     //margin: 5px 0;
     @media screen and (min-width: map-get($breakpoints, large)) {
-        padding: 30px;
+        padding: 3rem;
         //margin: 5px;
     }
 }
-
 #icons {
     display: flex;
     width: 100%;
     justify-content: flex-end;
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
     .fa-cog {
         align-self: flex-start;
@@ -67,10 +66,14 @@ p {
         font-size: 3rem;
     }
     a {
+        transition: color .5s;
         margin-left: 2rem;
     }
-    a, a:visited, a:hover, a:active {
+    a, a:visited, a:active {
         color: inherit;
+    }
+    a:hover {
+        color: map-get($colors, 'accent2');
     }
 }
 
