@@ -101,9 +101,9 @@ export default {
     justify-content: center;
     align-items: center;
     text-align: center;
-    //background: url("~@/static/unsplash-adirenconverse.jpg");
+    //background: url("~@/static/unsplash-adrienconverse.jpg");
     background: linear-gradient(rgba(38, 70, 83, 0.80), rgba(38, 70, 83, 0.80)),
-  url("~@/static/unsplash-adirenconverse.jpg"); /*background image + tint*/
+  url("~@/static/unsplash-adrienconverse.jpg"); /*background image + tint*/
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -157,6 +157,7 @@ export default {
     color: map-get($colors, 'accent1');
     word-spacing: 5px;
     margin-bottom: 5rem;
+    margin-top: 5rem;
 }
 
 .links {
@@ -188,7 +189,7 @@ export default {
     //original width: 70 height: 40
     width: 1.75em;
     height: 1em;
-    background: #fff;
+    background: map-get($colors, 'text-default');
     display: block;
     text-align: center;
     line-height: 0px; //removing this breaks the mobile version?*

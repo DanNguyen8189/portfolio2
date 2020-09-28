@@ -2,8 +2,12 @@
     <div id='contact' class='content'>
         <div class='center-align-container'>
             <h1 class='section-title'>Get in touch!</h1>
-            <p>I'm available via email at dannguyen8189@gmail.com</p>
+            <p id='contact-text'>I'm available via email at dannguyen8189@gmail.com</p>
             <a href="mailto:dannguyen8189@gmail.com"><button>Send Email</button></a>
+            <div id='credits-section'>
+                <p>Landing page background image by @adrienconverse on Unsplash</p>
+                <p>Source code <a href='https://github.com/DanNguyen8189/portfolio2'>here</a></p>
+            </div>
         </div>
     </div>
 </template>
@@ -19,7 +23,7 @@ export default {};
     justify-content: center;
     align-items: center;
     text-align: center;
-    p {
+    #contact-text {
         font-size: 2rem;
         margin-bottom: 4rem;
     }
@@ -35,5 +39,12 @@ export default {};
     button:hover {
         color: map-get($colors, 'accent2');
     }
+
+    #credits-section {
+        margin-top: auto;
+    }
+}
+a:visited {
+    color: inherit;
 }
 </style>
