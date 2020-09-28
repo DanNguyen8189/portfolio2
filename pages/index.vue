@@ -156,7 +156,7 @@ export default {
     //color: #526488;
     color: map-get($colors, 'accent1');
     word-spacing: 5px;
-    padding-bottom: 15px;
+    margin-bottom: 5rem;
 }
 
 .links {

@@ -59,7 +59,7 @@ h1 {
 #featured-project-container {
     /*display: flex;
     flex-direction: column;*/
-    margin: (8 * map-get($spacing, 'project-margin')) 0;
+    margin-bottom: (5 * map-get($spacing, 'project-margin'));
     /*@media screen and (min-width: map-get($breakpoints, large)) {
         flex-direction: row;
     }*/
@@ -71,7 +71,7 @@ h1 {
         flex-direction: row;
     }
 }
-.right-orienation {
+.right-orientation {
     display: flex;
     flex-direction: column;
     @media screen and (min-width: map-get($breakpoints, large)) {

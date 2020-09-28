@@ -19,7 +19,7 @@
             <basic-project :project='projects[0]'/>
         </div>-->
         <div class='project-grid'>
-        <div v-for='project in projects' v-if='project.featured == null' :key='project.title' class='basic-project'>
+        <div v-for='project in projects' v-if='project.img == null' :key='project.title' class='basic-project'>
             <!--<basic-project :title="projects[n-1].title" :description="projects[n-1].description" 
                 :github="projects[n-1].github" :technologies="projects[n-1].technologies"/>-->
             <basic-project :project='project'/>

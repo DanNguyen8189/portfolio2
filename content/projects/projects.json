@@ -23,19 +23,25 @@
         "technologies": ["C"]
     },
     {
-        "title": "Gomoku AI Solver",
+        "title": "Gomoku Solver",
         "description": "Used Monte Carlo Tree Search algorithm method to implement an artificially intelligent agent to play the game of Gomoku, also known as Gobang or Go",
         "technologies": ["Python"]
     },
     {
         "title": "Hotspotify",
-        "image": "~static/hotspotify-screenshot.jpg",
         "img": "hotspotify-screenshot.jpg",
-        "featured": true,
         "description": "A web application that lets Spotify users view their most played music tracks and artists",
         "github": "https://github.com/DanNguyen8189/hotspotify",
         "link": "https://hotspotify.herokuapp.com/#/",
         "technologies": ["Vue", "Node", "Express"]
+    },
+    {
+        "title": "Django Blog",
+        "img": "django-blog-screenshot.jpg",
+        "description": "A blogging website! It's a work in progress (still working on the name :)).",
+        "github": "https://github.com/DanNguyen8189/my-first-blog",
+        "link": "https://frogblogger.herokuapp.com/",
+        "technologies": ["Django", "Python"]
     }]
 } 
   

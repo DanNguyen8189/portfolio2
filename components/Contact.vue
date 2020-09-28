@@ -30,6 +30,10 @@ export default {};
         background-color: map-get($colors, 'block1');
         border: none;
         color: map-get($colors, 'accent1');
+        transition: color 1s;
+    }
+    button:hover {
+        color: map-get($colors, 'accent2');
     }
 }
 </style>
