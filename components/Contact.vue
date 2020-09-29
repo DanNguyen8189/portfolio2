@@ -6,7 +6,7 @@
             <a href="mailto:dannguyen8189@gmail.com"><button>Send Email</button></a>
             <div id='credits-section'>
                 <p>Landing page background image by @adrienconverse on Unsplash</p>
-                <p>Source code <a href='https://github.com/DanNguyen8189/portfolio2'>here</a></p>
+                <p>Website built by me! Source code can be found <a href='https://github.com/DanNguyen8189/portfolio2'>here</a></p>
             </div>
         </div>
     </div>
@@ -41,6 +41,7 @@ export default {};
     }
 
     #credits-section {
+        font-size: 1.2rem;
         margin-top: auto;
     }
 }

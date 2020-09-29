@@ -144,6 +144,7 @@ body{
     left: 0;
     width: 100%;
     height: 100%;
+    font-weight: 700;
     visibility: hidden; 
     overflow: hidden;
     display: flex;

@@ -138,9 +138,11 @@ export default {
 }*/
 
 .name {
-    font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
-      "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    /*font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
+      "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;*/
+    font-family: 'Poiret One', cursive;
     display: block;
+    //font-weight: 300;
     font-weight: 700;
     font-size: 6rem;
     //color: #35495e;
@@ -151,6 +153,7 @@ export default {
 }
 
 .section-title {
+    font-family: 'Poiret One', cursive;
     font-weight: 700;
     font-size: 4rem;
     //color: #526488;
