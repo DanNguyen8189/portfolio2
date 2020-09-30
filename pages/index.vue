@@ -6,23 +6,23 @@
     <div id='landingpage' class='content'>
         <div class='center-align-container'>
             <div class='left-align-container'>
-                <p>Hello, my name is</p>
+                <p class='landing-page-text' style="--animation-order: 1;">Hello, my name is</p>
                 <!--<div class="break">uh</div>--> <!-- break -->
-                <h1 class='name'>Dan Nguyen</h1>
-                <p>Welcome to my site! I'm a newly graduated software developer 
+                <h1 class='name' style="--animation-order: 2;">Dan Nguyen</h1>
+                <p class='landing-page-text' style="--animation-order: 3;">Welcome to my site! I'm a recently graduated software developer 
                     looking for my first full-time role. Can I interest you in some projects of mine?</p>
                 <ul class='social_media'>
-                    <li id='linkedin'>
+                    <li id='linkedin' style="--animation-order: 5;">
                         <a href="https://www.linkedin.com/in/dannguyen8189/" target="_blank">
                             <i class='fab fa-linkedin-in' aria-hidden='true'></i>
                         </a>
                     </li>
-                    <li id="github">
+                    <li id="github" style="--animation-order: 6;">
                         <a href="https://github.com/DanNguyen8189" target="_blank">
                             <i class='fab fa-github' aria-hidden='true'></i>
                         </a>
                     </li>
-                    <li id='dev-to'>
+                    <li id='dev-to' style="--animation-order: 7;">
                         <a href="https://dev.to/danimalphantom" target="_blank">
                             <i class='fab fa-dev' aria-hidden='true'></i>
                         </a>
@@ -102,7 +102,7 @@ export default {
     align-items: center;
     text-align: center;
     //background: url("~@/static/unsplash-adrienconverse.jpg");
-    background: linear-gradient(rgba(38, 70, 83, 0.80), rgba(38, 70, 83, 0.80)),
+    background: linear-gradient(rgba(32, 59, 70, 0.85), rgba(32, 59, 70, 0.85)),
   url("~@/static/unsplash-adrienconverse.jpg"); /*background image + tint*/
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -150,6 +150,39 @@ export default {
     color: map-get($colors, 'accent1');
     letter-spacing: 1px;
     margin: 20px 0;
+    animation-name: animateName;
+    animation-duration: 2s;
+    animation-delay: calc(var(--animation-order) * 200ms);
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+}
+@keyframes animateName {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  
+  100% {
+    opacity: 1;
+  }
+}
+
+.landing-page-text {
+    animation-name: animateLandingPageText;
+    animation-duration: 2s;
+    animation-delay: calc(var(--animation-order) * 200ms);
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+}
+@keyframes animateLandingPageText {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  
+  100% {
+    opacity: 1;
+  }
 }
 
 .section-title {
@@ -186,6 +219,23 @@ export default {
     position: relative;
     font-size: 3rem;
     margin-left: 1em;
+
+    animation-name: animateSocialMedia;
+    animation-duration: 1.5s;
+    animation-delay: calc(var(--animation-order) * 150ms);
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes animateSocialMedia {
+  0% {
+    opacity: 0;
+    transform: scale(0.6) translateX(30px) rotate(180deg);
+  }
+  
+  100% {
+    opacity: 1;
+  }
 }
 
 .social_media li a {

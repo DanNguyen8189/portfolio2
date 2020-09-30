@@ -10,7 +10,7 @@
                 met many great people along the way. I look forward to learning more!</p>
             <br/>
             <br/>
-            <p>In my free time, I like making short comic strips and illustrating and posting my work on the web. I also enjoy playing soccer, basketball, and other outdoor activities.</p>
+            <p>In my free time, I like illustrating and making short comic strips and posting my work on the web. I also enjoy playing soccer and basketball.</p>
         </div>
     </div>
 </template>
