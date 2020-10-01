@@ -74,6 +74,10 @@ export default {
 </script>
 
 <style lang='scss'>
+
+// Classes that can be used in child components
+
+// Section layout
 .section-container {
     margin: 0 auto;
     min-height: 100vh;
@@ -82,6 +86,17 @@ export default {
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+.section-title {
+    font-family: 'Poiret One', cursive;
+    font-weight: 700;
+    font-size: 4rem;
+    //color: #526488;
+    color: map-get($colors, 'accent1');
+    word-spacing: 5px;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
 }
 
 .content {
@@ -97,6 +112,23 @@ export default {
         padding: 50px 15%;
     }
 }
+
+// Other useful classes
+.center-align-container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.left-align-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    text-align: left;
+} 
+
+// landing page styling
 #landingpage {
     justify-content: center;
     align-items: center;
@@ -110,32 +142,6 @@ export default {
     background-size: cover;
     background-position: center;
 }
-// containers used in other components
-.center-align-container {
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-.left-align-container {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    text-align: left;
-    p {
-        font-size: 2rem;
-    }
-    @media screen and (max-width: map-get($breakpoints, large)) {
-        p { 
-            font-size: 1.5rem;
-        }
-    }
-}
-/*.left-align-container p{
-    flex-basis: 100%;
-    background: red;
-}*/
 
 .name {
     /*font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
@@ -168,11 +174,16 @@ export default {
 }
 
 .landing-page-text {
+    font-size: 1.5rem;
     animation-name: animateLandingPageText;
     animation-duration: 2s;
     animation-delay: calc(var(--animation-order) * 200ms);
     animation-fill-mode: both;
     animation-timing-function: ease-in-out;
+    @media screen and (min-width: map-get($breakpoints, large)) {
+        font-size: 2rem;
+    }
+    
 }
 @keyframes animateLandingPageText {
   0% {
@@ -185,20 +196,10 @@ export default {
   }
 }
 
-.section-title {
-    font-family: 'Poiret One', cursive;
-    font-weight: 700;
-    font-size: 4rem;
-    //color: #526488;
-    color: map-get($colors, 'accent1');
-    word-spacing: 5px;
-    margin-bottom: 5rem;
-    margin-top: 5rem;
-}
-
 .links {
     padding-top: 15px;
 }
+
 .social_media {
   /*position: absolute;
     top: 9rem;
