@@ -11,6 +11,13 @@
         "technologies": ["Android", "Java", "Firebase"]
     },
     {
+        "title": "Project Management App",
+        "description": "A MEAN full stack application that lets admin members create projects and milestones for their clients to approve.",
+        "github": "https://github.com/DanNguyen8189/projectmanagement",
+        "link": "https://projectmanagement157.herokuapp.com/",
+        "technologies": ["MongoDB", "Express.js", "Angular.js", "Node.js"] 
+    },
+    {
         "title": "UCSD Web Components Library",
         "description": "Developed part of an open-source UC San Diego web components library and compiled them to form a service called Rate-it, a service like Reddit but with a rating system.",
         "github": "https://github.com/ucsd-cse112/team7",
