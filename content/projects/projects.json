@@ -15,7 +15,7 @@
         "description": "A MEAN full stack application that lets admin members create projects and milestones for their clients to approve.",
         "github": "https://github.com/DanNguyen8189/projectmanagement",
         "link": "https://projectmanagement157.herokuapp.com/",
-        "technologies": ["MongoDB", "Express.js", "Angular.js", "Node.js"] 
+        "technologies": ["MongoDB", "Express", "Angular", "Node"] 
     },
     {
         "title": "UCSD Web Components Library",
