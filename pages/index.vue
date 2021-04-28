@@ -10,7 +10,7 @@
                 <!--<div class="break">uh</div>--> <!-- break -->
                 <h1 class='name' style="--animation-order: 2;">Dan Nguyen</h1>
                 <p class='landing-page-text' style="--animation-order: 3;">Welcome to my site! I'm a recently graduated software developer 
-                    looking for my first full-time role. Can I interest you in some projects of mine?</p>
+                    looking for my first role. Can I interest you in some projects of mine?</p>
                 <ul class='social_media'>
                     <li id='linkedin' style="--animation-order: 5;">
                         <a href="https://www.linkedin.com/in/dannguyen8189/" target="_blank">
