@@ -40,14 +40,14 @@ p {
 }
 #basic-project-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* aligns each section one on top of the other */
     margin: 0;
-    text-align: left;
+    text-align: left; /* left aligns the description and title */
     width: 100%;
     background: map-get($colors, 'block1');
     padding: 3rem;
     p {
-        margin-bottom: 3rem;
+        margin-bottom: 3rem; /* adds space underneath for aesthetic purposes */
     }
     //margin: 5px 0;
     @media screen and (min-width: map-get($breakpoints, large)) {
@@ -64,7 +64,7 @@ p {
     font-size: 2rem;
     margin-bottom: 1rem;
     .fa-cog {
-        align-self: flex-start;
+        align-self: flex-start; /* breaks the cog symbol out of the other right aligned icons so it can sit on the left for design purposes */
         margin-right: auto;
         font-size: 3rem;
     }
@@ -85,7 +85,7 @@ p {
     margin-top: auto;
     display: flex;
     p {
-        margin: 0 0 0 2rem;
+        margin: 0 0 0 2rem; /* spaces each technology so they're not too close to each other */
     }
 }
 </style>
