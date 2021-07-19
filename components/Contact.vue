@@ -28,6 +28,7 @@ export default {};
         margin-bottom: 4rem;
     }
 
+    /* Send email button */
     button {
         padding: 2rem;
         cursor: pointer;
