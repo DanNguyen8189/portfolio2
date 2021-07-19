@@ -56,11 +56,11 @@ p {
     }
 }
 
-/* external links */
+/* external links (ex github) located at the top*/
 #icons {
     display: flex;
     width: 100%;
-    justify-content: flex-end;
+    justify-content: flex-end; /* lines the icons up at the right side */
     font-size: 2rem;
     margin-bottom: 1rem;
     .fa-cog {
@@ -69,7 +69,7 @@ p {
         font-size: 3rem;
     }
     a {
-        transition: color .5s;
+        transition: color .5s; /* slowly change color as user hovers over the link */
         margin-left: 2rem;
     }
     a, a:visited, a:active {
@@ -81,7 +81,7 @@ p {
 }
 
 #technologies-list {
-    align-self: flex-end;
+    align-self: flex-end; /* technologies list sits at the bottom right*/
     margin-top: auto;
     display: flex;
     p {
