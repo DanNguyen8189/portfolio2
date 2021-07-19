@@ -26,6 +26,8 @@
 export default {};
 </script>
 <style scoped lang='scss'>
+
+/* The about me portion consists of a paragraph with a description about me and a 2-column list of technologies I've used below it */
 #aboutme {
     font-size: 1.5rem;
     p {
