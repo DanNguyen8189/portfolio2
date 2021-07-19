@@ -71,17 +71,18 @@ h1 {
     display: flex;
     flex-direction: column;
     @media screen and (min-width: map-get($breakpoints, large)) {
-        flex-direction: row;
+        flex-direction: row; /* image and description box appears in the same order as it does in the html */
     }
 }
 .right-orientation {
     display: flex;
     flex-direction: column;
     @media screen and (min-width: map-get($breakpoints, large)) {
-        flex-direction: row-reverse;
+        flex-direction: row-reverse; /* reverses order of image and description box */
     }
 }
 
+/* the part with the project links, title, description, and technologies used */
 #project-info-container {
     display: flex;
     flex-direction: column;
@@ -98,7 +99,7 @@ h1 {
 #icons {
     display: flex;
     width: 100%;
-    justify-content: flex-end;
+    justify-content: flex-end; /* links show up on top right */
     font-size: 2rem;
     margin-bottom: 2rem;
     h1 {
@@ -107,7 +108,7 @@ h1 {
         margin-right: auto;
     }
     a {
-        transition: color .5s;
+        transition: color .5s; /* slowly changes color of icon on hover */
         margin-left: 2rem;
     }
     a, a:visited, a:active {
@@ -119,7 +120,7 @@ h1 {
 }
 
 #technologies-list {
-    align-self: flex-end;
+    align-self: flex-end; /* tecnologies list appears on bottom right */
     margin-top: auto;
     display: flex;
     p {
@@ -135,9 +136,9 @@ h1 {
 }*/
 
 img {
-    width: 100%;
+    width: 100%; /* on mobile view, the project image appears with the project description beneath it */
     @media screen and (min-width: map-get($breakpoints, large)) {
-        width: 70%;
+        width: 70%; /* on desktop view, the project image and description appear next to each other */
     }
 }
 </style>
