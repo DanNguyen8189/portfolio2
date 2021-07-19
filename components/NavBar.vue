@@ -28,16 +28,18 @@
 .nav {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: flex-end; /* move links towards the right */
     font-size: 1.5rem;
-    position: fixed;
-    z-index: 2;
+    position: fixed; /* sticks the menu to the top of the screen */
+    z-index: 2; /* menu should be on top */
     top: 0;
     left: 0;
     right: 0;
     //@at-rootbackground-color: map-get($colors, 'background');
-    backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px); /* the menu is slightly transparent and blurs the things behind it */
 }
+
+/* link to go home (default icon, home icon)*/
 .brand {
     margin-right: auto;
     margin-left: 2rem;
@@ -56,7 +58,7 @@ nav {
     color: map-get($colors, 'accent1');
     font-weight: bold;
     text-decoration: none;
-    transition: color .5s;
+    transition: color .5s; /* slowly change link color when use hovers over it */
 }
 /*.nuxt-link {
     color: map-get($colors, "yellow");
