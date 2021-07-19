@@ -30,6 +30,7 @@ export default {
 </script>
 
 <style scoped lang='scss'>
+/* Basic projects are the projects that don't have an image associated with them */
 h1 {
     color: map-get($colors, 'accent1');
     margin-bottom: 2rem;
@@ -54,6 +55,8 @@ p {
         //margin: 5px;
     }
 }
+
+/* external links */
 #icons {
     display: flex;
     width: 100%;
