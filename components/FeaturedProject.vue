@@ -56,6 +56,7 @@ export default {
 h1 {
     color: map-get($colors, 'accent1');
 }
+
 #featured-project-container {
     /*display: flex;
     flex-direction: column;*/
@@ -64,6 +65,8 @@ h1 {
         flex-direction: row;
     }*/
 }
+
+/* These projects alternate with the project image on either the left or the right side when on desktop view */
 .left-orientation {
     display: flex;
     flex-direction: column;
@@ -78,6 +81,7 @@ h1 {
         flex-direction: row-reverse;
     }
 }
+
 #project-info-container {
     display: flex;
     flex-direction: column;
@@ -90,6 +94,7 @@ h1 {
     }
 }
 
+/* external links */
 #icons {
     display: flex;
     width: 100%;
